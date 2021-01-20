@@ -1,6 +1,9 @@
 <template>
   <v-container>
-    <StaticChessBoard />
+    <StaticChessBoard 
+      :pieceString="`rnbqkbnrpppppppp................................PPPPPPPPRNBQKBNR`"
+      :orientation="`white`"
+    />
   </v-container>
 </template>
 
