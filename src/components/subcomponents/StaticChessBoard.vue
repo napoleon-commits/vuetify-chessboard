@@ -12,7 +12,9 @@
                 height: ${containerHeight*GoldenRatio}px;
             `"
         >
-            containerWidth: {{containerWidth}} ; containerHeight: {{containerHeight}}
+            <div>
+                containerWidth: {{containerWidth}} ; containerHeight: {{containerHeight}}
+            </div>
         </div>
     </div>
 </template>
