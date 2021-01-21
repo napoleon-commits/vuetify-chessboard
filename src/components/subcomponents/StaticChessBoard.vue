@@ -2,12 +2,14 @@
     <div :style="`font-size: ${fontSize};`">
         <v-row v-for="(rank, i) in 9" :key="rank">
             <v-col v-for="(file, j) in 9" :key="file">
-                <span v-if="coordinates[orientation][`${i}${j}`]">
-                    {{coordinates[orientation][`${i}${j}`]}}
-                </span>
-                <span v-else>
-                    {{pieceString[i*8+(j-1)]}}
-                </span>
+                <div class="text-center">
+                    <span v-if="coordinates[orientation][`${i}${j}`]">
+                        {{coordinates[orientation][`${i}${j}`]}}
+                    </span>
+                    <span v-else>
+                        {{pieceString[i*8+(j-1)]}}
+                    </span>
+                </div>
             </v-col>
         </v-row>
     </div>

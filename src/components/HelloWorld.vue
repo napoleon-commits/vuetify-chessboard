@@ -1,9 +1,11 @@
 <template>
   <v-container>
-    <StaticChessBoard 
-      :pieceString="pieceString"
-      :orientation="orientation"
-    />
+    <div :style="`height: 90vh; background-color: rgba(0,0,0,0.1);`">
+      <StaticChessBoard 
+        :pieceString="pieceString"
+        :orientation="orientation"
+      />
+    </div>
     <div class="my-5">
       <v-btn @click="toggleOrientation">Toggle Orientation</v-btn>
     </div>
