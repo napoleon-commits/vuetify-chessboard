@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :style="`font-size: ${fontSize};`">
         <v-row v-for="(rank, i) in 9" :key="rank">
             <v-col v-for="(file, j) in 9" :key="file">
                 <span v-if="coordinates[orientation][`${i}${j}`]">
@@ -59,7 +59,30 @@ export default {
                     '88': 'a',
                 },
             },
+            fontSize: '16px',
         }
+    },
+    methods: {
+        adjustFont() {
+            if(window.innerWidth < 286){
+                this.fontSize = '0.5rem';
+            }
+            else if(window.innerWidth < 309){
+                this.fontSize = '0.75rem';
+            }
+            else {
+                this.fontSize = '16px';
+            }
+        },
+    },
+    mounted() {
+        this.$nextTick(() => {
+            this.adjustFont();
+        });
+        window.addEventListener('resize', this.adjustFont);
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.adjustFont);
     },
 }
 </script>
