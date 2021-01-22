@@ -14,7 +14,12 @@
         >
             <v-row no-gutters v-for="(rank, i) in 9" :key="rank">
                 <v-col
-                    :style="`height: ${containerHeight*GoldenRatio/9}px;`"
+                    :style="`
+                        height: ${containerHeight*GoldenRatio/9}px;
+                        background-color: ${
+                            (coordinates[orientation][String(i)+String(j)])?'':((i+j-1)%2===0)?'white':darkSquareColor
+                        }
+                    `"
                     class="text-center" 
                     v-for="(file, j) in 9"
                     :key="file"
@@ -39,7 +44,7 @@ import GoldenRatio from '@/static/GoldenRatio';
 
 export default {
     name: 'StaticChessBoard',
-    props: ['containerWidth', 'containerHeight', 'orientation'],
+    props: ['containerWidth', 'containerHeight', 'orientation', 'darkSquareColor'],
     data() {
         return {
             GoldenRatio,

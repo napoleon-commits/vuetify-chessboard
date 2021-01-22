@@ -4,6 +4,7 @@
       :containerWidth="containerWidth"
       :containerHeight="containerHeight"
       :orientation="'white'"
+      :darkSquareColor="'red'"
     />
   </div>
 </template>
