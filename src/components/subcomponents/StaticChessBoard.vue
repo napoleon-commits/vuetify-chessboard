@@ -20,7 +20,7 @@
                     :key="file"
                     no-gutters
                 >
-                    <div :style="`padding-top: ${((containerHeight*GoldenRatio/9)-(16))/2}px`">
+                    <div :style="`padding-top: ${((containerHeight*GoldenRatio/9)-(fontSize))/2}px`">
                         {{i}}{{j}}
                     </div>
                 </v-col>
@@ -38,6 +38,7 @@ export default {
     data() {
         return {
             GoldenRatio,
+            fontSize: 16,
         };
     },
 }
