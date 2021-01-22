@@ -8,13 +8,23 @@
         <div
             :style="`
                 border: 2px solid black;
-                width: ${containerWidth*GoldenRatio}px;
-                height: ${containerHeight*GoldenRatio}px;
+                width: ${containerWidth*GoldenRatio+4}px;
+                height: ${containerHeight*GoldenRatio+4}px;
             `"
         >
-            <div>
-                containerWidth: {{containerWidth}} ; containerHeight: {{containerHeight}}
-            </div>
+            <v-row no-gutters v-for="(rank, i) in 9" :key="rank">
+                <v-col
+                    :style="`height: ${containerHeight*GoldenRatio/9}px;`"
+                    class="text-center" 
+                    v-for="(file, j) in 9"
+                    :key="file"
+                    no-gutters
+                >
+                    <span>
+                        {{i}}{{j}}
+                    </span>
+                </v-col>
+            </v-row>
         </div>
     </div>
 </template>
