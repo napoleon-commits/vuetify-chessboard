@@ -20,9 +20,9 @@
                     :key="file"
                     no-gutters
                 >
-                    <span>
+                    <div :style="`padding-top: ${((containerHeight*GoldenRatio/9)-(16))/2}px`">
                         {{i}}{{j}}
-                    </span>
+                    </div>
                 </v-col>
             </v-row>
         </div>
