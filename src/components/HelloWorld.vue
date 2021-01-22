@@ -1,5 +1,5 @@
 <template>
-  <div id="board-container" :style="`background-color: rgba(0,0,0,0.1); height: 100vh; width: 100vw;`">
+  <div id="board-container" :style="`background-color: rgba(0,0,0,0.87); height: 100vh; width: 100vw;`">
     <StaticChessBoard
       :containerWidth="containerWidth"
       :containerHeight="containerHeight"

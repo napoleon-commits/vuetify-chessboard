@@ -3,11 +3,12 @@
         :style="`
             padding-top: ${((containerHeight)-(containerHeight*GoldenRatio))/2}px;
             padding-left: ${((containerWidth)-(containerWidth*GoldenRatio))/2}px;
+            color: white;
         `"
     >
         <div
             :style="`
-                border: 2px solid black;
+                border: 2px solid ${darkSquareColor};
                 width: ${containerWidth*GoldenRatio+4}px;
                 height: ${containerHeight*GoldenRatio+4}px;
             `"
