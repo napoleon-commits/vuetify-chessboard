@@ -3,6 +3,7 @@
     <StaticChessBoard
       :containerWidth="containerWidth"
       :containerHeight="containerHeight"
+      :orientation="'white'"
     />
   </div>
 </template>
