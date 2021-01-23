@@ -33,7 +33,11 @@
                         {{coordinates[orientation][String(i)+String(j)]}}
                     </div>
                     <div v-else>
-                        <ChessPieceImage :letter="pieceString[(i*8)+(j-1)]"/>
+                        <ChessPieceImage
+                            :letter="pieceString[(i*8)+(j-1)]"
+                            :max-height="containerHeight*GoldenRatio/9"
+                            :max-width="containerWidth*GoldenRatio/9*GoldenRatio"
+                        />
                     </div>
                 </v-col>
             </v-row>

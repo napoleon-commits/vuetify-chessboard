@@ -2,9 +2,9 @@
     <v-img
     :lazy-src="require('@/images/blankSquare.png')"
     :src="imageSrc"
+    :max-height="maxHeight"
+    :max-width="maxWidth"
     ></v-img>
-        <!-- :max-height="maxHeight"
-    :max-width="maxWidth" -->
 </template>
 
 <script>
