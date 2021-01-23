@@ -26,13 +26,14 @@
                     :key="file"
                     no-gutters
                 >
-                    <div :style="`padding-top: ${((containerHeight*GoldenRatio/9)-(fontSize))/2}px`">
-                        <span v-if="coordinates[orientation][String(i)+String(j)]">
-                            {{coordinates[orientation][String(i)+String(j)]}}
-                        </span>
-                        <span v-else>
-                            
-                        </span>
+                    <div
+                        v-if="coordinates[orientation][String(i)+String(j)]"
+                        :style="`padding-top: ${((containerHeight*GoldenRatio/9)-(fontSize))/2}px`"
+                    >
+                        {{coordinates[orientation][String(i)+String(j)]}}
+                    </div>
+                    <div v-else>
+                        
                     </div>
                 </v-col>
             </v-row>
