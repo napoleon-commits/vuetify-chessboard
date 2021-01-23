@@ -5,6 +5,7 @@
       :containerHeight="containerHeight"
       :orientation="'white'"
       :darkSquareColor="'red'"
+      :pieceString="StartingPositionString"
     />
   </div>
 </template>
@@ -12,6 +13,7 @@
 <script>
   import $ from 'jquery';
   import StaticChessBoard from '@/components/subcomponents/StaticChessBoard';
+  import StartingPositionString from '@/static/StartingPositionString';
 
   export default {
     name: 'HelloWorld',
@@ -22,6 +24,7 @@
       return {
         containerWidth: null,
         containerHeight: null,
+        StartingPositionString,
       };
     },
     methods: {

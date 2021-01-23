@@ -33,7 +33,7 @@
                         {{coordinates[orientation][String(i)+String(j)]}}
                     </div>
                     <div v-else>
-                        
+                        <ChessPieceImage :letter="pieceString[(i*8)+(j-1)]"/>
                     </div>
                 </v-col>
             </v-row>
@@ -43,10 +43,14 @@
 
 <script>
 import GoldenRatio from '@/static/GoldenRatio';
+import ChessPieceImage from '@/components/subcomponents/ChessPieceImage';
 
 export default {
     name: 'StaticChessBoard',
-    props: ['containerWidth', 'containerHeight', 'orientation', 'darkSquareColor'],
+    props: ['containerWidth', 'containerHeight', 'orientation', 'darkSquareColor', 'pieceString'],
+    components: {
+        ChessPieceImage,
+    },
     data() {
         return {
             GoldenRatio,
