@@ -24,7 +24,6 @@
                     class="text-center" 
                     v-for="(file, j) in 9"
                     :key="file"
-                    no-gutters
                 >
                     <div
                         v-if="coordinates[orientation][String(i)+String(j)]"
