@@ -4,6 +4,7 @@
     :src="imageSrc"
     :max-height="maxHeight"
     :max-width="maxWidth"
+    class="ma-auto"
     ></v-img>
 </template>
 
