@@ -32,7 +32,7 @@
                     >
                         {{coordinates[orientation][String(i)+String(j)]}}
                     </div>
-                    <div v-else>
+                    <div style="cursor: pointer;" v-else>
                         <ChessPieceImage
                             :letter="pieceString[(i*8)+(j-1)]"
                             :tileWidth="containerWidth*GoldenRatio/9"
