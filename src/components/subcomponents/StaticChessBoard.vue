@@ -35,7 +35,8 @@
                     <div v-else>
                         <ChessPieceImage
                             :letter="pieceString[(i*8)+(j-1)]"
-                            :max-width="containerWidth*GoldenRatio/9"
+                            :tileWidth="containerWidth*GoldenRatio/9"
+                            :tileHeight="containerHeight*GoldenRatio/9"
                         />
                     </div>
                 </v-col>

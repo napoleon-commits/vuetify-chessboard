@@ -10,7 +10,7 @@
 <script>
 export default {
     name: 'ChessPieceImage',
-    props: ['letter', 'maxWidth',],
+    props: ['letter', 'tileWidth', 'tileHeight'],
     data() {
         return {
             innerWidth: null,
@@ -28,7 +28,13 @@ export default {
             return require('@/images/blankSquare.png');
         },
         maxWidthComputed(){
-            return this.maxWidth;
+            if(this.tileWidth > 47.1766){
+                if(this.tileHeight < 43){
+                    return this.tileHeight;
+                }
+                return 47.1766;
+            }
+            return 20;
         },
     },
     methods: {
