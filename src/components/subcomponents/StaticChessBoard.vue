@@ -35,7 +35,6 @@
                     <div style="cursor: pointer;" v-else>
                         <ChessPieceImage
                             :letter="pieceString[(i*8)+(j-1)]"
-                            :tileWidth="containerWidth*GoldenRatio/9"
                             :tileHeight="containerHeight*GoldenRatio/9"
                         />
                     </div>
